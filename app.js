@@ -5,8 +5,10 @@ const app = express();
 
 const tours = JSON.parse(fs.readFileSync(`./dev-data/data/tours-simple.json`));
 
+//Necessary for the res.body
 app.use(express.json());
 
+// Get all tours
 const getAllTours = (req, res) => {
   res.status(200).json({
     status: 'Success',
@@ -17,6 +19,7 @@ const getAllTours = (req, res) => {
   });
 };
 
+// Get a Tour
 const getTour = (req, res) => {
   const id = req.params.id * 1;
 
@@ -37,6 +40,8 @@ const getTour = (req, res) => {
   });
 };
 
+
+// Create a Tour
 const createTour = (req, res) => {
   const newId = tours[tours.length - 1].id + 1;
   const newTour = Object.assign({ id: newId }, req.body);
@@ -57,6 +62,7 @@ const createTour = (req, res) => {
   );
 };
 
+// Update a tour, use PATCH if updating part of tour
 const updateTour = (req, res) => {
   const id = req.params.id * 1;
 
@@ -75,6 +81,8 @@ const updateTour = (req, res) => {
   });
 };
 
+
+// Delete a tour
 const deleteTour = (req, res) => {
   if (req.params.id * 1 > tours.length) {
     return res.status(404).json({
