@@ -2,10 +2,11 @@
   "name": "natour_v2",
   "version": "1.0.0",
   "description": "Learning MongoDB, Express and Node ",
-  "main": "app.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "nodemon server.js"
   },
   "author": "Ronald",
   "license": "MIT",
