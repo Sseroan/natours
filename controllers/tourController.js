@@ -80,7 +80,7 @@ const createTour = (req, res) => {
   );
 };
 
-// Update a tour, use PATCH if updating part of tour
+// Update a tour, use PATCH if updating part of tour/ properties
 const updateTour = (req, res) => {
   const id = req.params.id * 1;
 
