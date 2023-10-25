@@ -5,7 +5,6 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon app.js",
     "start": "nodemon server.js"
   },
   "author": "Ronald",
