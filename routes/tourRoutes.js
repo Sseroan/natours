@@ -1,7 +1,7 @@
 import express from 'express';
 
 // use this when export default in controller
-import tourController from '../controllers/tourController.js';
+import tourController from './../controllers/tourController.js';
 
 // use this when export const NAME in controller
 // import {

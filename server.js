@@ -1,5 +1,7 @@
 import app from './app.js';
 
+console.log(process.env);
+
 // Server Connection
 const port = 3000;
 app.listen(port, () => {
